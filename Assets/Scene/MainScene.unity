@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45044917, g: 0.5004496, b: 0.575194, a: 1}
+  m_IndirectSpecularColor: {r: 0.45044857, g: 0.5004495, b: 0.5751923, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3509,7 +3509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.604158
+      value: -4.12
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3517,7 +3517,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.839087
+      value: -9.25
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6000,11 +6000,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PointCount: 10
---- !u!1 &429587857 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1815345801761848, guid: 6d34f074083a0dc4d9798f703bad35de, type: 3}
-  m_PrefabInstance: {fileID: 218067415}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &430267559
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14072,7 +14067,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5cfac6433276247a8ac18a1b2624f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UpPositon: {x: -10.999311, y: 1.9959999, z: -1.741}
 --- !u!65 &1116803476
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16412,11 +16406,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f05ea7c48f708740a8d9fdf380c3ece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MyX: 0
-  m_MyY: 0
-  m_MyZ: 0
-  doorState: 1
-  _door: {fileID: 429587857}
 --- !u!1001 &1310221431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17088,7 +17077,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.61415815
+      value: 2.32
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17096,7 +17085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.581
+      value: -8.83
       objectReference: {fileID: 0}
     - target: {fileID: 4914818815454766, guid: 160a6121b4d25254da31bdab63ad82b7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25724,7 +25713,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d5cfac6433276247a8ac18a1b2624f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _UpPositon: {x: -7.37, y: 2.71, z: -14.782}
 --- !u!1001 &2039402294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30926,7 +30914,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f600ed17bbd57148acbf597cb37730a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tr: {fileID: 3893294197870568438}
 --- !u!114 &4416926081863022926
 MonoBehaviour:
   m_ObjectHideFlags: 0
