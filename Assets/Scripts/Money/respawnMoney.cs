@@ -5,63 +5,31 @@ using UnityEngine;
 
 public class respawnMoney : MonoBehaviour
 {
-    public struct taskSpawn
-    {
-        public float time;
-        public Vector3 position;
-        public int scores;
-    }
-
     public GameObject money;
-    public GameObject bigMoney; // передавать объект, а не хранить тут
     private GameObject newMoney;
-    private List<taskSpawn> listSpawn = new List<taskSpawn>();
-    private taskSpawn tempMoneySpawn;
-    private int i;
+    private float time;
+    private Vector3 Pos;
+    private bool check = false;
 
 
 
-    public void respawn(Vector3 pos, int scores, float timeSpawn)
+    public void respawn(Vector3 pos)
     {
-        Debug.Log("вход в respawn   ");
-        tempMoneySpawn.position = pos;
-        tempMoneySpawn.scores = scores;
-        tempMoneySpawn.time = timeSpawn;
-
-        listSpawn.Add(tempMoneySpawn);
+        Pos = pos;
+        time = 3;
+        check = true;
     }
 
     void Update()
     {
-
-        if (listSpawn.Count > 0)
+        if (check)
         {
-            i = 0;
-            while (i <= (listSpawn.Count - 1))
+            time = time - Time.deltaTime;
+            if ((time > 0) && (time < 1))
             {
-                tempMoneySpawn = listSpawn[i];
-                tempMoneySpawn.time = tempMoneySpawn.time - Time.deltaTime;
-                listSpawn[i] = tempMoneySpawn;
-
-                if ((listSpawn[i].time > 0) && (listSpawn[i].time < 1))
-                {
-                    switch (listSpawn[i].scores)
-                    {
-                        case 10:
-                            newMoney = Instantiate(money, listSpawn[i].position, Quaternion.identity);
-                            newMoney.SetActive(true);
-                            break;
-                        case 50:
-                            newMoney = Instantiate(bigMoney, listSpawn[i].position, Quaternion.identity);
-                            newMoney.SetActive(true);
-                            break;
-                    }
-
-                    listSpawn.RemoveAt(i);
-                    i--;
-                }
-
-                i++;
+                newMoney = Instantiate(money, Pos, Quaternion.identity);
+                newMoney.SetActive(true);
+                check = false;
             }
         }
     }
