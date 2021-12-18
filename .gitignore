@@ -3,12 +3,6 @@
 [Oo]bj/
 [Bb]uild/
 [Bb]uilds/
-
-[merge "unityyamlmerge"]
-	name = Unity SmartMerge (UnityYamlMerge)
-	driver = \"{путь к папке с Unity}/Editor/Data/Tools/UnityYAMLMerge.exe\" merge -h -p --force --fallback none %O %B %A %A
-	recursive = binary
-
 Assets/AssetStoreTools*
 
 # Visual Studio cache directory
@@ -37,7 +31,6 @@ ExportedObj/
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
-Logs
 
 # Builds
 *.apk
