@@ -6,13 +6,18 @@ using UnityEngine.SceneManagement;
 public class destroyMoney : MonoBehaviour
 {
     public scoring _scoring;
+    public statsHero statsHero;
+    public AudioSource audio;
 
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Money")
         {
-            _scoring.Addcount(collider.gameObject.GetComponent<memoryMoneyCoast>().PointCount);
+            //audio.Play(); //довать звук 
+            statsHero.Scores(collider.gameObject.GetComponent<memoryMoneyCoast>().PointCount);
+            _scoring.refresh();
+
             Destroy(collider.gameObject);
         }
     }

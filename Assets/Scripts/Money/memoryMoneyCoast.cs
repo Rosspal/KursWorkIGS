@@ -5,4 +5,5 @@ using UnityEngine;
 public class memoryMoneyCoast : MonoBehaviour
 {
     public int PointCount;
+    public float time;
 }

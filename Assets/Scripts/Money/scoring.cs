@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class scoring : MonoBehaviour
 {
     [SerializeField] GameObject ScoreText;
-    private int point = 0;
+    public statsHero statsHero;
 
-    public void Addcount(int money)
+    public void refresh()
     {
-        point+=money;
-        ScoreText.GetComponent<Text>().text = "Money: " + point.ToString();    
+        ScoreText.GetComponent<Text>().text = "Money: " + statsHero.Scores();
     }
 }
