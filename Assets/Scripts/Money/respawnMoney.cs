@@ -13,7 +13,7 @@ public class respawnMoney : MonoBehaviour
     }
 
     public GameObject money;
-    public GameObject bigMoney; // передавать объект, а не хранить тут
+    //public GameObject bigMoney; // передавать объект, а не хранить тут
     private GameObject newMoney;
     private List<taskSpawn> listSpawn = new List<taskSpawn>();
     private taskSpawn tempMoneySpawn;
@@ -51,10 +51,10 @@ public class respawnMoney : MonoBehaviour
                             newMoney = Instantiate(money, listSpawn[i].position, Quaternion.identity);
                             newMoney.SetActive(true);
                             break;
-                        case 50:
-                            newMoney = Instantiate(bigMoney, listSpawn[i].position, Quaternion.identity);
-                            newMoney.SetActive(true);
-                            break;
+                        //case 50:
+                        //    newMoney = Instantiate(bigMoney, listSpawn[i].position, Quaternion.identity);
+                        //    newMoney.SetActive(true);
+                        //    break;
                     }
 
                     listSpawn.RemoveAt(i);
