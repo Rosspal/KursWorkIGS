@@ -5,13 +5,16 @@ using UnityEngine;
 public class LadderUp : MonoBehaviour
 {
     [SerializeField] GameObject _ladderSpawnPoint;
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<CharacterController>().enabled = false;
-            other.gameObject.transform.position = _ladderSpawnPoint.transform.position;
-            other.gameObject.GetComponent<CharacterController>().enabled = true;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                other.gameObject.GetComponent<CharacterController>().enabled = false;
+                other.gameObject.transform.position = _ladderSpawnPoint.transform.position;
+                other.gameObject.GetComponent<CharacterController>().enabled = true;
+            }
         }
     }
 }
