@@ -13,6 +13,8 @@ TagManager:
   - Question
   - NextScene
   - Enemy
+  - LadderUp
+  - LadderDoun
   layers:
   - Default
   - TransparentFX
