@@ -11,7 +11,7 @@ public class statsHero : MonoBehaviour
 
     void Start()
     {
-        hp = 2;
+        hp = 3;
     }
 
     void Update()
@@ -21,7 +21,10 @@ public class statsHero : MonoBehaviour
             respawn();
         }
     }
-
+    public int getHp()
+    {
+        return hp;
+    }
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Enemy")
@@ -30,10 +33,10 @@ public class statsHero : MonoBehaviour
         }
     }
 
-    void respawn()
+    public void respawn()
     {
         scores = 0;
-        hp = 2;
+        hp = 3;
         GetComponent<CharacterController>().enabled = false;
         transform.position = respawnPoint.position;
         GetComponent<CharacterController>().enabled = true;

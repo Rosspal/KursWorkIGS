@@ -15,9 +15,8 @@ public class destroyMoney : MonoBehaviour
         if (collider.gameObject.tag == "Money")
         {
             //audio.Play(); //довать звук 
-            statsHero.Scores(collider.gameObject.GetComponent<memoryMoneyCoast>().PointCount);
+            statsHero.Scores(1);
             _scoring.refresh();
-
             Destroy(collider.gameObject);
         }
     }

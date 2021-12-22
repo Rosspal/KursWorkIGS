@@ -12,6 +12,7 @@ TagManager:
   - Win
   - Question
   - NextScene
+  - Enemy
   layers:
   - Default
   - TransparentFX
