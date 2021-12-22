@@ -7,14 +7,14 @@ public class destroyMoney : MonoBehaviour
 {
     public scoring _scoring;
     public statsHero statsHero;
-    //public AudioSource audio;
+    public AudioSource audio;
 
 
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Money")
         {
-            //audio.Play(); //довать звук 
+            audio.Play(); //довать звук 
             statsHero.Scores(1);
             _scoring.refresh();
             Destroy(collider.gameObject);
