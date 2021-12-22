@@ -32,8 +32,7 @@ public class TrigersSave : MonoBehaviour
         {
             info.money = Hero.Scores();
         }
-        
-        PlayerPreferens.list.RemoveAt(info.level);
-        PlayerPreferens.list.Insert(info.level, info);
+
+        PlayerPreferens.list[info.level] = info; 
     }
 }

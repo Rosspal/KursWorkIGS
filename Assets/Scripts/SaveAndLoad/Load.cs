@@ -48,7 +48,7 @@ public class Load : MonoBehaviour
                         Debug.Log(dataFromFile[i]);
                         info.time = TimeSpan.Parse(dataFromFile[i]);
                         i++;
-                        PlayerPreferens.list.Insert(level,info);
+                        PlayerPreferens.list[level] = info;
                     }
                 }
             }
