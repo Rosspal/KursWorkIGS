@@ -7,6 +7,7 @@ public class MusicVolume : MonoBehaviour
     private float volume = 0.5f;
     [SerializeField] AudioSource fond;
     [SerializeField] AudioSource money;
+    private float result;
 
     void Start()
     {
@@ -15,7 +16,8 @@ public class MusicVolume : MonoBehaviour
 
     void Update()
     {
-        fond.volume = PlayerPreferens.volume;
+        result = ((float)PlayerPreferens.volume / 100) * 90;
+        fond.volume = PlayerPreferens.volume + result;
         money.volume = PlayerPreferens.volume;
     }
 }
