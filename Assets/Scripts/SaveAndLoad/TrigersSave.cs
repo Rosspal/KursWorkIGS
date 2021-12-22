@@ -8,15 +8,16 @@ using System;
 public class TrigersSave : MonoBehaviour
 {
    [SerializeField] statsHero Hero;
-    PlayerPreferens.LevelInfo info;
-   [SerializeField] LevelTimer time;
+    PlayerPreferens.LevelInfo info;//
+   [SerializeField] LevelTimer time;//6
     public TimeSpan timer;
 
     public void SaveInfo()
     {
         info.level = SceneManager.GetActiveScene().buildIndex;
-        PlayerPreferens.LevelInfo it = (PlayerPreferens.LevelInfo)PlayerPreferens.list[info.level];
+        PlayerPreferens.LevelInfo it = (PlayerPreferens.LevelInfo)PlayerPreferens.list[info.level];//11
         timer = TimeSpan.Zero;
+
         if (it.time == timer)
         {
             info.time = time.timeTimer;
@@ -27,13 +28,17 @@ public class TrigersSave : MonoBehaviour
             {
                 info.time = time.timeTimer;
             }
+            else
+            {
+                info.time = it.time;
+            }
         }
+
         if (Hero.Scores() > it.money)
         {
             info.money = Hero.Scores();
         }
-        
-        PlayerPreferens.list.RemoveAt(info.level);
-        PlayerPreferens.list.Insert(info.level, info);
+
+        PlayerPreferens.list[info.level] = info;
     }
 }

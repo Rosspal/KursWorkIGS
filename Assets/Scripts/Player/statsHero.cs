@@ -51,7 +51,6 @@ public class statsHero : MonoBehaviour
     {
         if (collider.gameObject.tag == "LevelStart")
         {
-            Debug.Log("start");
             time.start();
         }
     }

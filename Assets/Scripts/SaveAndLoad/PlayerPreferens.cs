@@ -26,10 +26,22 @@ static class PlayerPreferens
         {
             if (s.level != 0)
             {
+                Debug.Log(s.time.ToString());
                 level += s.level + "|" + s.money + "|" + s.time.ToString() + "|";
             }
         }
         level += "-1";
         return level ;
+    }
+
+    public static void refresh()
+    {
+        name = "";
+        volume = 0.5f;
+        for (int i = 0; i != 6; i++)
+        {
+            list[i] = level;
+        }
+
     }
 }

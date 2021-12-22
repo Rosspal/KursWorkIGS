@@ -24,6 +24,8 @@ public class Load : MonoBehaviour
             check = false;
         }
 
+        PlayerPreferens.refresh();
+
         if (check)
         {
             using (StreamReader sw = new StreamReader(fileName))
@@ -39,16 +41,13 @@ public class Load : MonoBehaviour
 
                     while ((int)Convert.ToInt32(dataFromFile[i]) != -1)
                     {
-                        Debug.Log(dataFromFile[i]);
                         info.level = level = (int)Convert.ToInt32(dataFromFile[i]);
                         i++;
-                        Debug.Log(dataFromFile[i]);
                         info.money = (int)Convert.ToInt32(dataFromFile[i]);
                         i++;
-                        Debug.Log(dataFromFile[i]);
                         info.time = TimeSpan.Parse(dataFromFile[i]);
                         i++;
-                        PlayerPreferens.list.Insert(level,info);
+                        PlayerPreferens.list[level] = info;
                     }
                 }
             }
