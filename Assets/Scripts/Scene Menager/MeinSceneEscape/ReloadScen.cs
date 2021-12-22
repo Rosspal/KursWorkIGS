@@ -5,10 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class ReloadScen : MonoBehaviour
 {
+    TimeRule _timeRule;
+    private void Start()
+    {
+        _timeRule = GetComponent<TimeRule>();
+    }
     public void ReloadScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1;
-        Cursor.lockState = CursorLockMode.Locked;
+        _timeRule.Resume();
     }
 }
