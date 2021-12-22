@@ -11,6 +11,7 @@ public class statsHero : MonoBehaviour
     [SerializeField] LevelTimer time;
     [SerializeField] TrigersSave trigersSave;
     [SerializeField] Save save;
+    [SerializeField] NextScene NextScene;
 
     void Start()
     {
@@ -42,6 +43,7 @@ public class statsHero : MonoBehaviour
             time.stop();
             trigersSave.SaveInfo();
             save.SaveToFile();
+            NextScene.nextScene();
         }
     }
 

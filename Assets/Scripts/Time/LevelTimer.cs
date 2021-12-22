@@ -4,7 +4,7 @@ using UnityEngine;
 public class LevelTimer : MonoBehaviour
 {
     private DateTime timeBegin;
-    private TimeSpan timeTimer;
+    public TimeSpan timeTimer;
     public string timeString;
     public bool check = false;
 
@@ -37,6 +37,5 @@ public class LevelTimer : MonoBehaviour
     public void stop()
     {
         check = false;
-        refresh();
     }
 }

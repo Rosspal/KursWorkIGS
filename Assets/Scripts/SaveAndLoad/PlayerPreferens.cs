@@ -1,28 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 static class PlayerPreferens
 {
     public struct LevelInfo
     {
-        public string time;
+        public TimeSpan time;
         public int money;
         public int level;
     }
 
     public static string name = "Name";
-    public static int volume = 0;
-    public static ArrayList list = new ArrayList();
+    public static float volume = 0.5f;
+    public static LevelInfo level;
+    
+    public static ArrayList list = new ArrayList() {level, level, level, level, level, level, level };
     //private int fullHD;
 
     public static string PlayerToString()
     {
-        string level = "|";
+        string level = name + "|" + volume + "|";
         foreach (LevelInfo s in list)
         {
-            level += s.level + "|" + s.money + "|" + s.time;
+            if (s.level != 0)
+            {
+                level += s.level + "|" + s.money + "|" + s.time.ToString() + "|";
+            }
         }
-        return name + "|" + volume + "|" + level ;
+        level += "-1";
+        return level ;
     }
 }
