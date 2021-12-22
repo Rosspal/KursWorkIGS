@@ -8,6 +8,9 @@ public class statsHero : MonoBehaviour
     private int scores = 0;
     public scoring _scoring;
     public Transform respawnPoint;// точка спавна
+    [SerializeField] LevelTimer time;
+    [SerializeField] TrigersSave trigersSave;
+    [SerializeField] Save save;
 
     void Start()
     {
@@ -21,15 +24,33 @@ public class statsHero : MonoBehaviour
             respawn();
         }
     }
+
     public int getHp()
     {
         return hp;
     }
+
     void OnTriggerEnter(Collider collider)
     {
         if (collider.gameObject.tag == "Enemy")
         {
             hp -= collider.gameObject.GetComponent<enemyStats>().damage;
+        }
+
+        if (collider.gameObject.tag == "LevelEnd")
+        {
+            time.stop();
+            trigersSave.SaveInfo();
+            save.SaveToFile();
+        }
+    }
+
+    void OnTriggerExit(Collider collider)
+    {
+        if (collider.gameObject.tag == "LevelStart")
+        {
+            Debug.Log("start");
+            time.start();
         }
     }
 
