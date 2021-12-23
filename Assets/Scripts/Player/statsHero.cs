@@ -6,12 +6,15 @@ public class statsHero : MonoBehaviour
 {
     private int hp;
     private int scores = 0;
+    private bool key = false;
     public scoring _scoring;
     public Transform respawnPoint;// точка спавна
     [SerializeField] LevelTimer time;
     [SerializeField] TrigersSave trigersSave;
     [SerializeField] Save save;
     [SerializeField] NextScene NextScene;
+
+    public bool Key { get => key; set => key = value; }
 
     void Start()
     {
@@ -38,12 +41,9 @@ public class statsHero : MonoBehaviour
             hp -= collider.gameObject.GetComponent<enemyStats>().damage;
         }
 
-        if (collider.gameObject.tag == "LevelEnd")
+        if (collider.gameObject.tag == "KeyGold")
         {
-            time.stop();
-            trigersSave.SaveInfo();
-            save.SaveToFile();
-            NextScene.nextScene();
+            
         }
     }
 
@@ -73,6 +73,13 @@ public class statsHero : MonoBehaviour
     public void Scores(int a)
     {
         scores += a;
+    }
+
+    public void StopLevel()
+    {
+        time.stop();
+        trigersSave.SaveInfo();
+        save.SaveToFile();
     }
 
     public void NewSpawn(Transform newSpawn)

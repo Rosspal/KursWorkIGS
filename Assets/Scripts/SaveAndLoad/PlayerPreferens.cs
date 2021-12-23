@@ -26,7 +26,6 @@ static class PlayerPreferens
         {
             if (s.level != 0)
             {
-                Debug.Log(s.time.ToString());
                 level += s.level + "|" + s.money + "|" + s.time.ToString() + "|";
             }
         }
