@@ -38,6 +38,10 @@ public class TrigersSave : MonoBehaviour
         {
             info.money = Hero.Scores();
         }
+        else
+        {
+            info.money = it.money;
+        }
 
         PlayerPreferens.list[info.level] = info;
     }
