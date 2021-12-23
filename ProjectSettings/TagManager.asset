@@ -17,6 +17,7 @@ TagManager:
   - LadderDoun
   - LevelStart
   - LevelEnd
+  - KeyGold
   layers:
   - Default
   - TransparentFX

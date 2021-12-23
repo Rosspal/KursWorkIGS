@@ -7,25 +7,39 @@ public class LadderUp : MonoBehaviour
 {
     [SerializeField] GameObject _ladderSpawnPoint;
     [SerializeField] GameObject _helpText;
-    private void OnTriggerStay(Collider other)
+    [SerializeField] GameObject player;
+    private bool check = false;
+
+    void Update()
     {
-        if (other.gameObject.tag == "Player")
+        if (check)
         {
-            _helpText.GetComponent<Text>().text = "Press E to use Ladder";
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
-                other.gameObject.GetComponent<CharacterController>().enabled = false;
-                other.gameObject.transform.position = _ladderSpawnPoint.transform.position;
-                other.gameObject.GetComponent<CharacterController>().enabled = true;
+                player.GetComponent<CharacterController>().enabled = false;
+                player.transform.position = _ladderSpawnPoint.transform.position;
+                player.GetComponent<CharacterController>().enabled = true;
                 _helpText.GetComponent<Text>().text = "";
+                check = false;
             }
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
+            check = false;
             _helpText.GetComponent<Text>().text = "";
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            check = true;
+            _helpText.GetComponent<Text>().text = "Нажмите 'E' что подняться";
         }
     }
 }
