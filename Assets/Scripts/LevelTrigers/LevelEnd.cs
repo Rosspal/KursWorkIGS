@@ -9,7 +9,7 @@ public class LevelEnd : MonoBehaviour
     [SerializeField] TimerLevelEnd TimerEnd;
     [SerializeField] Animator anim;
     public AudioSource audioSrc;
-    private statsHero sh;
+    [SerializeField] GameObject sh;
     private bool key = false;
     private bool check = false;
 
@@ -41,7 +41,6 @@ public class LevelEnd : MonoBehaviour
             check = true;
             if (other.gameObject.GetComponent<statsHero>().Key)
             {
-                sh = gameObject.GetComponent<statsHero>();
                 _helpText.GetComponent<Text>().text = "Нажмите Е что бы открыть";
                 key = true;
             }
