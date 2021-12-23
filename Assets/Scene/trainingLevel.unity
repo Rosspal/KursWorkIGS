@@ -17945,6 +17945,7 @@ MonoBehaviour:
   TimerEnd: {fileID: 911249419}
   anim: {fileID: 911249417}
   audioSrc: {fileID: 0}
+  sh: {fileID: 4416926081863022924}
 --- !u!1001 &911805128
 PrefabInstance:
   m_ObjectHideFlags: 0
