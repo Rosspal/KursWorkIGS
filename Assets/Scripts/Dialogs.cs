@@ -8,7 +8,10 @@ public class Dialogs : MonoBehaviour
 {
     [SerializeField] string text = "";
     [SerializeField] GameObject _helpText;
+    [SerializeField] stateOfQuests quest;
     private bool check = false;
+    private bool first = true;
+
 
     void Update()
     {
@@ -17,6 +20,11 @@ public class Dialogs : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 _helpText.GetComponent<Text>().text = text;
+                if (first)
+                {
+                    first = false;
+                    quest.Go();
+                }
             }
         }
         

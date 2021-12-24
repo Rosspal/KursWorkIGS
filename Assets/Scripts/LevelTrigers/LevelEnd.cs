@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class LevelEnd : MonoBehaviour
 {
     [SerializeField] GameObject _helpText;
-    [SerializeField] TimerLevelEnd TimerEnd;
     [SerializeField] Animator anim;
     public AudioSource audioSrc;
     [SerializeField] GameObject sh;
@@ -28,7 +27,7 @@ public class LevelEnd : MonoBehaviour
                 {
                     sh.GetComponent<statsHero>().StopLevel();
                     anim.enabled = true;
-                    TimerEnd.start();
+                    GetComponent<TimerLevelEnd>().start();
                 }
             }
         } 
@@ -41,6 +40,7 @@ public class LevelEnd : MonoBehaviour
             check = true;
             if (other.gameObject.GetComponent<statsHero>().Key)
             {
+                sh = other.gameObject;
                 _helpText.GetComponent<Text>().text = "Нажмите Е что бы открыть";
                 key = true;
             }
