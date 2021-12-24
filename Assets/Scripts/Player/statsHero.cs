@@ -7,14 +7,13 @@ public class statsHero : MonoBehaviour
     private int hp;
     private int scores = 0;
     private bool key = false;
-    public scoring _scoring;
-    public Transform respawnPoint;// точка спавна
-    [SerializeField] LevelTimer time;
-    [SerializeField] TrigersSave trigersSave;
-    [SerializeField] Save save;
-    [SerializeField] NextScene NextScene;
+    [SerializeField] scoring _scoring;
+    [SerializeField] Transform respawnPoint;// точка спавна
+    public ArrayList questItem = new ArrayList();
+
 
     public bool Key { get => key; set => key = value; }
+    public int Hp { get => hp; set => hp = value; }
 
     void Start()
     {
@@ -34,26 +33,6 @@ public class statsHero : MonoBehaviour
         return hp;
     }
 
-    void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.tag == "Enemy")
-        {
-            hp -= collider.gameObject.GetComponent<enemyStats>().damage;
-        }
-
-        if (collider.gameObject.tag == "KeyGold")
-        {
-            
-        }
-    }
-
-    void OnTriggerExit(Collider collider)
-    {
-        if (collider.gameObject.tag == "LevelStart")
-        {
-            time.start();
-        }
-    }
 
     public void respawn()
     {
@@ -77,9 +56,9 @@ public class statsHero : MonoBehaviour
 
     public void StopLevel()
     {
-        time.stop();
-        trigersSave.SaveInfo();
-        save.SaveToFile();
+        GetComponent<LevelTimer>().stop();
+        GetComponent<TrigersSave>().SaveInfo();
+        GetComponent<Save>().SaveToFile();
     }
 
     public void NewSpawn(Transform newSpawn)

@@ -18,6 +18,7 @@ TagManager:
   - LevelStart
   - LevelEnd
   - KeyGold
+  - Item
   layers:
   - Default
   - TransparentFX
