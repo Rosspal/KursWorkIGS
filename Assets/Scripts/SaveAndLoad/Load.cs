@@ -17,7 +17,6 @@ public class Load : MonoBehaviour
         int i = 2;
         int level;
         fileName = PlayerPreferens.name + ".txt";
-        TimeSpan ts;
 
         if (!System.IO.File.Exists(fileName))
         {

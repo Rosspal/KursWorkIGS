@@ -7,7 +7,6 @@ public class LevelEnd : MonoBehaviour
 {
     [SerializeField] GameObject _helpText;
     [SerializeField] Animator anim;
-    public AudioSource audioSrc;
     [SerializeField] GameObject sh;
     private bool key = false;
     private bool check = false;
@@ -25,6 +24,7 @@ public class LevelEnd : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.E))
                 {
+                    _helpText.GetComponent<Text>().text = "Победа!";
                     sh.GetComponent<statsHero>().StopLevel();
                     anim.enabled = true;
                     GetComponent<TimerLevelEnd>().start();
@@ -47,7 +47,7 @@ public class LevelEnd : MonoBehaviour
             else
             {
                 _helpText.GetComponent<Text>().text = "Чёрт! без ключа не открыть";
-                //запуск ауди Чёрт!
+                other.gameObject.GetComponent<SoundBox>().Play(1);
             } 
         }
     }
