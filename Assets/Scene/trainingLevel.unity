@@ -17820,6 +17820,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1516840816812699402, guid: 69beb7d8398acdb44b9866760561cce2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300002, guid: bc7d61194f5453649bc87fa87a09fc2f, type: 3}
+    - target: {fileID: 2365121673099279181, guid: 69beb7d8398acdb44b9866760561cce2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: bc7d61194f5453649bc87fa87a09fc2f, type: 3}
     - target: {fileID: 3390743658276153202, guid: 69beb7d8398acdb44b9866760561cce2, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -17931,7 +17939,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _helpText: {fileID: 1691143569}
-  TimerEnd: {fileID: 911249419}
   anim: {fileID: 911249417}
   audioSrc: {fileID: 0}
   sh: {fileID: 4416926081863022924}
@@ -46616,9 +46623,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoring: {fileID: 882467542}
   respawnPoint: {fileID: 1598657504}
-  time: {fileID: 4416926081863022931}
-  trigersSave: {fileID: 4416926081863022933}
-  save: {fileID: 4416926081863022932}
 --- !u!114 &4416926081863022931
 MonoBehaviour:
   m_ObjectHideFlags: 0
