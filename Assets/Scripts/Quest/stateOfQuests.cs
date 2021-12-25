@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class stateOfQuests : MonoBehaviour
 {
-
     public virtual void Start()
     {
 
@@ -23,8 +22,5 @@ public class stateOfQuests : MonoBehaviour
     public virtual void Go()
     {
 
-    }
-
-    
-
+    } 
 }

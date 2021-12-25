@@ -10,6 +10,7 @@ public class QuestSword : stateOfQuests
     {
         sword.SetActive(false);
     }
+
     public override void Go()
     {
         sword.SetActive(true);
