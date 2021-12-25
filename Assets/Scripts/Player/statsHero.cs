@@ -8,11 +8,8 @@ public class statsHero : MonoBehaviour
     private int scores = 0;
     private bool key = false;
 
-    [SerializeField] scoring _scoring;
     [SerializeField] Transform respawnPoint;// точка спавна
     public ArrayList questItem = new ArrayList();
-
-
 
     public bool Key { get => key; set => key = value; }
     public int Hp { get => hp; set => hp = value; }
@@ -34,7 +31,6 @@ public class statsHero : MonoBehaviour
     {
         return hp;
     }
-
 
     public void respawn()
     {
