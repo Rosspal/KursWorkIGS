@@ -24,6 +24,7 @@ public class MainSceneScoresCoin : MonoBehaviour
             coin2.SetActive(false);
             coin3.SetActive(false);
         }
+
         if (_statsHero.Scores() == 1) 
             coin1.SetActive(true);
         if (_statsHero.Scores() == 2) 

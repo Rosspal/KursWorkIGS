@@ -19,6 +19,7 @@ TagManager:
   - LevelEnd
   - KeyGold
   - Item
+  - Heal
   layers:
   - Default
   - TransparentFX

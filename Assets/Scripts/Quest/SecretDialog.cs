@@ -12,6 +12,7 @@ public class SecretDialog : MonoBehaviour
     [SerializeField] stateOfQuests quest;
     private bool check = false;
     private bool first = true;
+    private GameObject player;
 
 
     void Update()
@@ -23,19 +24,18 @@ public class SecretDialog : MonoBehaviour
                 _helpText.GetComponent<Text>().text = text;
                 if (first)
                 {
+                    player.GetComponent<statsHero>().questItem.Remove(item);
                     first = false;
                     quest.Go();
                 }
             }
         }
-
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            check = false;
             _helpText.GetComponent<Text>().text = "";
         }
     }
@@ -46,7 +46,7 @@ public class SecretDialog : MonoBehaviour
         {
             if (other.gameObject.GetComponent<statsHero>().questItem.Contains(item))
             {
-                other.gameObject.GetComponent<statsHero>().questItem.Remove(item);
+                player = other.gameObject;
                 first = true;
                 check = true;
                 _helpText.GetComponent<Text>().text = textBefore;

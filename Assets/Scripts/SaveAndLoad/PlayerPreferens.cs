@@ -15,9 +15,7 @@ static class PlayerPreferens
     public static string name = "Name";
     public static float volume = 0.5f;
     public static LevelInfo level;
-    
     public static ArrayList list = new ArrayList() {level, level, level, level, level, level, level };
-    //private int fullHD;
 
     public static string PlayerToString()
     {
@@ -41,6 +39,5 @@ static class PlayerPreferens
         {
             list[i] = level;
         }
-
     }
 }
