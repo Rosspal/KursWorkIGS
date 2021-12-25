@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DestroyKey : MonoBehaviour
 {
-    //[SerializeField] AudioSource audioKey;
+    [SerializeField] AudioSource audioKey;
 
     void OnTriggerEnter(Collider collider)
     {
