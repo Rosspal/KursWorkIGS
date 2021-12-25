@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class destroyMoney : MonoBehaviour
 {
-    public scoring _scoring;
     public statsHero statsHero;
     public AudioSource audioMoney;
 
@@ -16,7 +15,6 @@ public class destroyMoney : MonoBehaviour
         {
             audioMoney.Play();
             statsHero.Scores(1);
-            _scoring.refresh();
             Destroy(collider.gameObject);
         }
     }

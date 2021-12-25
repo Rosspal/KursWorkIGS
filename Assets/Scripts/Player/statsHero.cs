@@ -7,7 +7,6 @@ public class statsHero : MonoBehaviour
     private int hp;
     private int scores = 0;
     private bool key = false;
-    public scoring _scoring;
     public Transform respawnPoint;// точка спавна
     [SerializeField] LevelTimer time;
     [SerializeField] TrigersSave trigersSave;
@@ -62,7 +61,6 @@ public class statsHero : MonoBehaviour
         GetComponent<CharacterController>().enabled = false;
         transform.position = respawnPoint.position;
         GetComponent<CharacterController>().enabled = true;
-        _scoring.refresh();
     }
 
     public int Scores()
