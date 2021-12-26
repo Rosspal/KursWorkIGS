@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
+    [SerializeField] int index;
+
     public void nextScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(index);
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }

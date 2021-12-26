@@ -33,7 +33,6 @@ static class PlayerPreferens
 
     public static void refresh()
     {
-        name = "";
         volume = 0.5f;
         for (int i = 0; i != 6; i++)
         {
