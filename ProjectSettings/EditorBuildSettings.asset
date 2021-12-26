@@ -12,15 +12,24 @@ EditorBuildSettings:
     path: Assets/Scene/trainingLevel.unity
     guid: ed4a1819a74d3994ea157f90189058f4
   - enabled: 1
+    path: Assets/Scene/1.unity
+    guid: bc59bae89284f1540a5b75e4f34f829c
+  - enabled: 1
+    path: Assets/Scene/2.unity
+    guid: 2ad5cfbbac1a9614faaa132496752940
+  - enabled: 1
+    path: Assets/Scene/3.unity
+    guid: ddde694f6b3c28d44b1cf7092be8fa81
+  - enabled: 1
     path: Assets/Scene/MainScene.unity
     guid: a5eae3f68a8c9d54cb5914980339b7ae
   - enabled: 1
     path: Assets/Scene/LEVEL 1.unity
     guid: a85c8aad663272b499f888d9811cc2d6
   - enabled: 1
-    path: Assets/Scene/MenuUI.unity
-    guid: a7e9388da4d01df428f70c2adb201df2
-  - enabled: 1
     path: Assets/Scene/Maze.unity
     guid: b26df5a5306486749bf43c9625773e38
+  - enabled: 1
+    path: Assets/Scene/MenuUI.unity
+    guid: a7e9388da4d01df428f70c2adb201df2
   m_configObjects: {}
