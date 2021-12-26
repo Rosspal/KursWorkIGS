@@ -10,7 +10,7 @@ public class NextScene : MonoBehaviour
     public void nextScene()
     {
         SceneManager.LoadScene(index);
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }
