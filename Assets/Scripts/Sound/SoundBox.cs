@@ -24,6 +24,7 @@ public class SoundBox : MonoBehaviour
         {
             s.volume = v;
         }
+        srs[0].volume -= v/2;
     }
 
 }

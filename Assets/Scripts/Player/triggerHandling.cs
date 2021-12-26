@@ -13,13 +13,13 @@ public class triggerHandling : MonoBehaviour
             switch (this.GetComponent<statsHero>().Scores())
             {
                 case 1:
-                    this.GetComponent<SoundBox>().Play(4);
-                    break;
-                case 2:
                     this.GetComponent<SoundBox>().Play(5);
                     break;
-                case 3:
+                case 2:
                     this.GetComponent<SoundBox>().Play(6);
+                    break;
+                case 3:
+                    this.GetComponent<SoundBox>().Play(7);
                     break;
             }
 
@@ -29,7 +29,7 @@ public class triggerHandling : MonoBehaviour
         if (collider.gameObject.tag == "KeyGold")
         {
             this.GetComponent<statsHero>().Key = true;
-            this.GetComponent<SoundBox>().Play(3);
+            this.GetComponent<SoundBox>().Play(4);
             Destroy(collider.gameObject);
         }
 
@@ -40,10 +40,10 @@ public class triggerHandling : MonoBehaviour
             switch (Random.Range(1, 3))
             {
                 case 1:
-                    this.GetComponent<SoundBox>().Play(10);
+                    this.GetComponent<SoundBox>().Play(11);
                     break;
                 case 2:
-                    this.GetComponent<SoundBox>().Play(11);
+                    this.GetComponent<SoundBox>().Play(12);
                     break;
             }
             Destroy(collider.gameObject);
@@ -59,13 +59,13 @@ public class triggerHandling : MonoBehaviour
                     switch (Random.Range(1, 4))
                     {
                         case 1:
-                            this.GetComponent<SoundBox>().Play(2);
+                            this.GetComponent<SoundBox>().Play(3);
                             break;
                         case 2:
-                            this.GetComponent<SoundBox>().Play(7);
+                            this.GetComponent<SoundBox>().Play(8);
                             break;
                         case 3:
-                            this.GetComponent<SoundBox>().Play(9);
+                            this.GetComponent<SoundBox>().Play(10);
                             break;
                     }
                     break;
@@ -73,10 +73,10 @@ public class triggerHandling : MonoBehaviour
                     switch (Random.Range(1, 3))
                     {
                         case 1:
-                            this.GetComponent<SoundBox>().Play(0);
+                            this.GetComponent<SoundBox>().Play(1);
                             break;
                         case 2:
-                            this.GetComponent<SoundBox>().Play(8);
+                            this.GetComponent<SoundBox>().Play(9);
                             break;
                     }
                     break;
