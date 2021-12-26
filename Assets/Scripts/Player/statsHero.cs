@@ -34,11 +34,7 @@ public class statsHero : MonoBehaviour
 
     public void respawn()
     {
-        scores = 0;
-        hp = 3;
-        GetComponent<CharacterController>().enabled = false;
-        transform.position = respawnPoint.position;
-        GetComponent<CharacterController>().enabled = true;
+        GetComponent<Death>().respawn();
     }
 
     public int Scores()

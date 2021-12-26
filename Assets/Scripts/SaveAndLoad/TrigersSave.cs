@@ -15,7 +15,7 @@ public class TrigersSave : MonoBehaviour
     public void SaveInfo()
     {
         info.level = SceneManager.GetActiveScene().buildIndex;
-        PlayerPreferens.LevelInfo it = (PlayerPreferens.LevelInfo)PlayerPreferens.list[info.level];//11
+        PlayerPreferens.LevelInfo it = (PlayerPreferens.LevelInfo)PlayerPreferens.list[info.level];
         timer = TimeSpan.Zero;
 
         if (it.time == timer)
