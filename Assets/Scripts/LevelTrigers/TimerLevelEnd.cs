@@ -21,9 +21,9 @@ public class TimerLevelEnd : MonoBehaviour
             Debug.Log(timeTimer);
             if (timeTimer >= TimeSpan.Parse("00:00:04"))
             {
-                SceneManager.LoadScene(5);
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
+                SceneManager.LoadScene(8);
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
                 check = false;
             }
         }
