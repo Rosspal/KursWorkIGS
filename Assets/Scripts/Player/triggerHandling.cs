@@ -36,7 +36,8 @@ public class triggerHandling : MonoBehaviour
         if (collider.gameObject.tag == "Item")
         {
             //10 11
-            this.GetComponent<statsHero>().questItem.Add("Sword");
+            this.GetComponent<statsHero>().questItem.Add(collider.gameObject.transform.name);
+            Debug.Log(collider.gameObject.transform.name);
             switch (Random.Range(1, 3))
             {
                 case 1:

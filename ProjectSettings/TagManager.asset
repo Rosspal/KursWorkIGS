@@ -20,6 +20,7 @@ TagManager:
   - KeyGold
   - Item
   - Heal
+  - Present
   layers:
   - Default
   - TransparentFX
