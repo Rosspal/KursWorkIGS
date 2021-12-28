@@ -9,7 +9,7 @@ public class OpenSwordWall : stateOfQuests
 
     private float t = 0;
     private float amp = 0.05f;
-    private float freq = 0.05f;
+    private float freq = 0.1f;
     private float offset = 0;
     private bool check = false;
 
@@ -39,6 +39,7 @@ public class OpenSwordWall : stateOfQuests
     {
         sword.SetActive(true);
         check = true;
+        this.GetComponent<AudioSource>().Play();
 
     }
 }

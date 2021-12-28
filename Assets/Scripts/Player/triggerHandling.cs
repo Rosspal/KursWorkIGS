@@ -29,7 +29,7 @@ public class triggerHandling : MonoBehaviour
         if (collider.gameObject.tag == "KeyGold")
         {
             this.GetComponent<statsHero>().Key = true;
-            this.GetComponent<SoundBox>().Play(3);
+            this.GetComponent<SoundBox>().Play(4);
             Destroy(collider.gameObject);
         }
 
