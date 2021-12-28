@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6d8f291d599a8784ba47d4b8073db251
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - VlaShu
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 29aab6e13f891be4685ae5b4816e3b8c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
