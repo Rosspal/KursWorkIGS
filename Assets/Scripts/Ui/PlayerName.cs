@@ -10,6 +10,6 @@ public class PlayerName : MonoBehaviour
     void Start()
     {
         _name = PlayerPreferens.name;
-        GetComponent<Text>().text = _name;
+        GetComponent<Text>().text = "Ваш ник: "+_name;
     }
 }
