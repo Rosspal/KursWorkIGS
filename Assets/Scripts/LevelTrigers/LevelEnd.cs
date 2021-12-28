@@ -24,7 +24,9 @@ public class LevelEnd : MonoBehaviour
             {
                 if (Input.GetKey(KeyCode.E))
                 {
+                    Debug.Log("1 - " + _helpText.GetComponent<Text>().text);
                     _helpText.GetComponent<Text>().text = "Победа!";
+                    Debug.Log("2 - " + _helpText.GetComponent<Text>().text);
                     sh.GetComponent<statsHero>().StopLevel();
                     anim.enabled = true;
                     GetComponent<TimerLevelEnd>().start();
@@ -47,7 +49,7 @@ public class LevelEnd : MonoBehaviour
             else
             {
                 _helpText.GetComponent<Text>().text = "Чёрт! без ключа не открыть";
-                other.gameObject.GetComponent<SoundBox>().Play(1);
+                other.gameObject.GetComponent<SoundBox>().Play(2);
             } 
         }
     }
